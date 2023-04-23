@@ -15,7 +15,7 @@ internal class Program
                 Console.WriteLine("\n\nMain Menu\n\n");
                 Console.WriteLine("What would you like to do today?\n\n");
                 Console.WriteLine("\n\n1 - Generate a new cross hair");
-                Console.WriteLine("0 - Close application\n\n");
+                Console.WriteLine("0 - Close application");
 
 
                 string command = Console.ReadLine();
