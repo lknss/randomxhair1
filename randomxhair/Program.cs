@@ -5,6 +5,7 @@ internal class Program
     {
         Getuserinput();
 
+
         static void Getuserinput()
         {
             bool closeapp = false;
@@ -16,8 +17,8 @@ internal class Program
                 Console.WriteLine("\n\n1 - Generate a new cross hair");
                 Console.WriteLine("0 - Close application\n\n");
 
-                string command = Console.ReadLine();
 
+                string command = Console.ReadLine();
                 switch (command)
                 {
                     case "0":
@@ -47,6 +48,8 @@ internal class Program
             int crosshairdot = rand.Next(0, 1);
             int drawoutline = rand.Next(0, 1);
             int outlinethick = rand.Next((int)0.5, 3);
+
+            Console.WriteLine("\n\nYour Random Crosshair:");
             Console.WriteLine($"\n\ncl_crosshairstyle {crosshairstyle}; cl_crosshair_t {crosshairt}; cl_crosshaircolor {crosshaircolor}; " +
                 $"cl_crosshairsize {crosshairsize}; cl_crosshairthickness {crosshairthick}; " +
                 $"cl_crosshairgap {crosshairgap}; cl_crosshairdot {crosshairdot};" +
