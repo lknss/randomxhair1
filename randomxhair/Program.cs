@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -11,7 +13,7 @@ internal class Program
             bool closeapp = false;
             while (closeapp == false)
             {
-                Console.Clear();
+                
                 Console.WriteLine("\n\nMain Menu\n\n");
                 Console.WriteLine("What would you like to do today?\n\n");
                 Console.WriteLine("\n\n1 - Generate a new cross hair");
@@ -22,6 +24,7 @@ internal class Program
                 switch (command)
                 {
                     case "0":
+                        Console.Clear();
                         Console.WriteLine("Existing program.");
                         closeapp = true;
                         break;
@@ -29,6 +32,7 @@ internal class Program
                         GeneratexHair();
                         break;
                     default:
+                        Console.Clear();
                         Console.WriteLine("Invalid input please choose an option listed above");
                         break;
                 }
@@ -55,7 +59,7 @@ internal class Program
                 $"cl_crosshairgap {crosshairgap}; cl_crosshairdot {crosshairdot};" +
                 $"cl_crosshair_drawoutline {drawoutline}; cl_crosshair_outlinethickness {outlinethick};\n\n  ");
 
-            Console.WriteLine("Press 1 to generate a new crosshair.");
+            Console.WriteLine("Press any key to generate a new crosshair.");
             Console.WriteLine("Press 0 to return to main menu");
 
             string command = Console.ReadLine();
@@ -63,12 +67,10 @@ internal class Program
             switch (command)
             {
                 case "0":
+                    Console.Clear();
                     return;
-                case "1":
-                    GeneratexHair();
-                    break;
                 default:
-                    Console.WriteLine("Invalid input please choose an option listed above");
+                    GeneratexHair();
                     break;
             }
         }
