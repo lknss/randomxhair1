@@ -25,7 +25,7 @@ internal class Program
                 {
                     case "0":
                         Console.Clear();
-                        Console.WriteLine("Existing program.");
+                        Console.WriteLine("Exiting program.");
                         closeapp = true;
                         break;
                     case "1":
